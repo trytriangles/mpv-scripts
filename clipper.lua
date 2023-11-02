@@ -15,15 +15,15 @@ log_path = os.getenv("HOME") .. "/mpv-clipper.log"
 -- The log will contain lines in the form
 --      <success: 0 | 1> <start_pos: int> <end_pos: int> <filename: str>
 output_folder = os.getenv("HOME") .. "/mpv clips/"
-os.execute(string.format("mkdir \"%s\"", output_folder))
 lead_in_secs = 6 -- Number of preceding seconds to include in the output clip.
 clip_duration = 40
--- allow_duplicate_names = false -- If true, saving a clip with a filename that
-                              -- already exists will add a numeric counter to
-                              -- the filename, allowing it to be saved. If
-                              -- false, attempting to save a clip with a name
-                              -- that already exists is a no-op.
+    -- allow_duplicate_names = false -- If true, saving a clip with a filename that
+    -- already exists will add a numeric counter to
+    -- the filename, allowing it to be saved. If
+    -- false, attempting to save a clip with a name
+    -- that already exists is a no-op.
 -- End configuration
+os.execute(string.format("mkdir \"%s\"", output_folder))
 
 function get_start_time()
     -- Get the start time for the clip, being the current time minus lead_in_secs,
@@ -61,7 +61,7 @@ function save_clip()
         return
     end
 
-    
+
     local cmd = string.format(
         "ffmpeg -loglevel quiet -ss %f -i \"%s\" -t %d -c copy \"%s\"",
         start_pos,
