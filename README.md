@@ -7,7 +7,8 @@ A set of hopefully handy scripts for the beloved [mpv](https://github.com/mpv-pl
 ### bookmark
 
 Adds a hotkey (by default, **b**) to write the current file and time position in
-edit-decision-list line format to specified file.
+edit-decision-list line format to a specified file (by default,
+`$HOME/vids.edl`).
 
 ### clipper
 
