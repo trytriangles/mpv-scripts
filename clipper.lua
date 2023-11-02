@@ -11,10 +11,11 @@
 
 -- Configuration
 hotkey = "g"
-log_path = "c:/home/documents/_red/clipper_log.log"
+log_path = os.getenv("HOME") .. "/mpv-clipper.log"
 -- The log will contain lines in the form
 --      <success: 0 | 1> <start_pos: int> <end_pos: int> <filename: str>
-output_folder = "z:/temp/favclips/"
+output_folder = os.getenv("HOME") .. "/mpv clips/"
+os.execute(string.format("mkdir \"%s\"", output_folder))
 lead_in_secs = 6 -- Number of preceding seconds to include in the output clip.
 clip_duration = 40
 -- allow_duplicate_names = false -- If true, saving a clip with a filename that
