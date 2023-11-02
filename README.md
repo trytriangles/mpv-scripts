@@ -4,6 +4,11 @@ A set of hopefully handy scripts for the beloved [mpv](https://github.com/mpv-pl
 
 ## Scripts
 
+### bookmark
+
+Adds a hotkey (by default, **b**) to write the current file and time position in
+edit-decision-list line format to specified file.
+
 ### clipper
 
 Adds a hotkey to save a segment of footage around the current time position to
