@@ -2,6 +2,8 @@
 -- 
 -- Adds a hotkey to copy a segment of footage around the current time position
 -- to a separate folder as its own file.
+-- 
+-- Requires ffmpeg on PATH.
 
 
 -- TODO: Implement allow_duplicate_names.
